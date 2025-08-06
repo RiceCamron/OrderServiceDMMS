@@ -1,0 +1,42 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/order-create",
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{"Host":  "localhost", "Port":  5164}],
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "UpstreamPathTemplate": "/order-update",
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{"Host": "localhost", "Port": 5164}],
+      "UpstreamHttpMethod": ["PUT"]
+    },
+    {
+      "UpstreamPathTemplate": "/get-id",
+      "DownstreamPathTemplate": "/api/Order/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{"Host": "localhost", "Port": 5164}],
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "UpstreamPathTemplate": "/get-all",
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{"Host": "localhost", "Port": 5164}],
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "UpstreamPathTemplate": "/order-delete",
+      "DownstreamPathTemplate": "/api/Order",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [{"Host": "localhost", "Port":  5164}],
+      "UpstreamHttpMethod": ["Delete"]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5020"
+  }
+}
